@@ -1,12 +1,25 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { Outlet } from "react-router-dom";
 
 const Main = () => {
-    return (
-        <div>
+  return (
+    <div>
+      <Container>
+        <Row>
+          <Col lg="2">
+            <h2>Left Side Nav</h2>
+          </Col>
+          <Col lg="7">
             <Outlet></Outlet>
-        </div>
-    );
+          </Col>
+          <Col lg="3">
+            <h2>Right Side Nav</h2>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
 };
 
 export default Main;
